@@ -7,7 +7,7 @@ describe('Authentication Component', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AuthenticationComponent ]
+      declarations: [ AuthenticationComponent ],
     })
     .compileComponents();
   }));

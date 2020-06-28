@@ -13,6 +13,6 @@ import { RootComponent } from './root.component';
   ],
   bootstrap: [
     RootComponent,
-  ]
+  ],
 })
 export class AppModule { }
