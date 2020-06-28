@@ -160,12 +160,17 @@
       "doc",
       "singleline",
       "multiline"
+    ],
+    "template-i18n": [
+      true,
+      "check-text"
     ]
   },
   "rulesDirectory": [
     "codelyzer"
   ],
   "extends": [
+    "angular-tslint-rules",
     "tslint:recommended"
   ]
 }

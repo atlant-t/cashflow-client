@@ -4,7 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
+    "start:en-US": "ng serve --configuration=en-US",
+    "start:ru": "ng serve --configuration=ru",
     "build": "ng build",
+    "prebuild:prod": "yarn lint && yarn test:silent",
+    "build:prod": "ng build --prod",
+    "extract:ru": "ng xi18n --configuration=ru",
+    "test:silent": "ng test --browsers=ChromeHeadless --watch=false",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -16,6 +22,7 @@
     "@angular/compiler": "~9.1.1",
     "@angular/core": "~9.1.1",
     "@angular/forms": "~9.1.1",
+    "@angular/localize": "9.1.11",
     "@angular/platform-browser": "~9.1.1",
     "@angular/platform-browser-dynamic": "~9.1.1",
     "@angular/router": "~9.1.1",

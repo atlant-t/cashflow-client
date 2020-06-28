@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="ru" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="appName" datatype="html">
+        <source>Cashflow</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">authentication/src/authentication.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <target>Cashflow</target>
+      </trans-unit>
+      <trans-unit id="invitationLogin" datatype="html">
+        <source>Log in to continue</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">authentication/src/authentication.component.html</context>
+          <context context-type="linenumber">3</context>
+        </context-group>
+        <note priority="1" from="description"> Invite to Log In </note>
+        <note priority="1" from="meaning">authentication </note>
+        <target>Войти в приложение через</target>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>

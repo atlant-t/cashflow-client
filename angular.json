@@ -17,6 +17,12 @@
       "root": "packages/app",
       "sourceRoot": "packages/app/src",
       "prefix": "app",
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "ru": "packages/app/locale/source.ru.xlf"
+        }
+      },
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -26,6 +32,7 @@
             "main": "packages/app/src/main.ts",
             "polyfills": "packages/app/src/polyfills.ts",
             "tsConfig": "packages/app/tsconfig.app.json",
+            "i18nMissingTranslation": "warning",
             "aot": true,
             "assets": [
               "packages/app/src/assets"
@@ -43,6 +50,7 @@
                   "with": "environments/app.prod.ts"
                 }
               ],
+              "aot": true,
               "optimization": true,
               "outputHashing": "all",
               "sourceMap": false,
@@ -51,6 +59,8 @@
               "extractLicenses": true,
               "vendorChunk": false,
               "buildOptimizer": true,
+              "i18nMissingTranslation": "error",
+              "localize": true,
               "budgets": [
                 {
                   "type": "initial",
@@ -63,6 +73,12 @@
                   "maximumError": "10kb"
                 }
               ]
+            },
+            "en-US": {
+              "localize": ["en-US"]
+            },
+            "ru": {
+              "localize": ["ru"]
             }
           }
         },
@@ -74,13 +90,27 @@
           "configurations": {
             "production": {
               "browserTarget": "app:build:production"
+            },
+            "en-US": {
+              "browserTarget": "app:build:en-US"
+            },
+            "ru": {
+              "browserTarget": "app:build:ru"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "app:build"
+            "browserTarget": "app:build",
+            "outputPath": "locale/extract",
+            "i18nFormat": "xlf"
+          },
+          "configurations": {
+            "ru": {
+              "i18nLocale": "ru",
+              "outFile": "source.ru.xlf"
+            }
           }
         },
         "test": {
@@ -126,6 +156,7 @@
           }
         }
       }
-    }},
+    }
+  },
   "defaultProject": "app"
 }
