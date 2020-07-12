@@ -35,6 +35,7 @@
             "i18nMissingTranslation": "warning",
             "aot": true,
             "assets": [
+              "packages/app/src/config",
               "packages/app/src/assets"
             ],
             "styles": [
@@ -124,7 +125,7 @@
             "tsConfig": "packages/app/tsconfig.spec.json",
             "karmaConfig": "packages/app/karma.conf.js",
             "assets": [
-              "packages/app/src/favicon.ico",
+              "packages/app/src/config",
               "packages/app/src/assets"
             ],
             "styles": [

@@ -1,13 +1,13 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { AuthenticationComponent } from './authentication.component';
+import { ContentComponent } from './content.component';
 
 @NgModule({
   declarations: [
-    AuthenticationComponent,
+    ContentComponent,
   ],
   imports: [
     CommonModule,
   ],
 })
-export class AuthenticationModule { }
+export class ContentModule { }
