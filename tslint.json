@@ -67,6 +67,7 @@
       true,
       "ignore-params"
     ],
+    "no-null-keyword": false,
     "no-non-null-assertion": true,
     "no-redundant-jsdoc": true,
     "no-switch-case-fall-through": true,
@@ -111,11 +112,15 @@
         }
       ]
     },
+    "member-access": true,
+    "prefer-readonly": false,
+    "prefer-template": false,
     "variable-name": {
       "options": [
         "ban-keywords",
         "check-format",
-        "allow-pascal-case"
+        "allow-pascal-case",
+        "allow-leading-underscore"
       ]
     },
     "whitespace": {
@@ -138,9 +143,11 @@
         "singleline": "never"
       }
     ],
+    "no-parameter-reassignment": false,
     "no-void-expression": false,
     "no-implicit-dependencies": false,
     "newline-per-chained-call": false,
+    "newline-before-return": false,
     "ordered-imports": false,
     "no-floating-promises": false,
     "no-conflicting-lifecycle": true,
@@ -155,6 +162,14 @@
     "template-no-negated-async": true,
     "use-lifecycle-interface": true,
     "use-pipe-transform-interface": true,
+    "strict-boolean-expressions": [
+      true,
+      "allow-null-union",
+      "allow-undefined-union",
+      "allow-string",
+      "allow-mix",
+      "ignore-rhs"
+    ],
     "comment-type": [
       true,
       "doc",
