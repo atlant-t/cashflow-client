@@ -33,11 +33,12 @@ export function getRedirectUrl(storage: AbstractSecurityStorage) {
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      // We need to initialize the routing after checking the authorization,
-      // since the checkAuth() method kicks off the complete setup flow
-      // and we need to wait for it to finish before the defender checks it.
-      initialNavigation: false,
-    }),
+    // We need to initialize the routing after checking the authorization,
+    // since the checkAuth() method kicks off the complete setup flow
+    // and we need to wait for it to finish before the defender checks it.
+    initialNavigation: 'disabled',
+    relativeLinkResolution: 'legacy',
+}),
     ContentModule,
   ],
   providers: [
