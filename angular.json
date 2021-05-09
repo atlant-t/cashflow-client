@@ -3,7 +3,8 @@
   "version": 1,
   "cli": {
     "packageManager": "yarn",
-    "analytics": "3df01c4f-c0a2-40d1-9365-2ba2287cab98"
+    "analytics": "3df01c4f-c0a2-40d1-9365-2ba2287cab98",
+    "defaultCollection": "@angular-eslint/schematics"
   },
   "schematics": {
     "@schematics/angular:component": {
@@ -75,10 +76,14 @@
               ]
             },
             "en-US": {
-              "localize": ["en-US"]
+              "localize": [
+                "en-US"
+              ]
             },
             "ru": {
-              "localize": ["ru"]
+              "localize": [
+                "ru"
+              ]
             }
           }
         },
@@ -134,15 +139,11 @@
           }
         },
         "lint": {
-          "builder": "@angular-devkit/build-angular:tslint",
+          "builder": "@angular-eslint/builder:lint",
           "options": {
-            "tsConfig": [
-              "packages/app/tsconfig.app.json",
-              "packages/app/tsconfig.spec.json",
-              "packages/app/e2e/tsconfig.json"
-            ],
-            "exclude": [
-              "**/node_modules/**"
+            "lintFilePatterns": [
+              "packages/app/**/*.ts",
+              "packages/app/**/*.html"
             ]
           }
         },
